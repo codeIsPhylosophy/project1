@@ -244,6 +244,7 @@ h3 {
     background-size: cover;
   }
 }
+
 .nav {
   display: flex;
   justify-content: center;
@@ -386,6 +387,13 @@ h3 {
   display: inline-block;
   margin-top: 10px;
   color: white;
+  max-height: 28px;
+  &:hover {
+    @media(min-width: 361px) {
+      border-bottom: 1px white solid;
+    }
+    
+  }
   @media (max-width: 360px) {
     white-space: nowrap;
     font-family: Roboto;
@@ -398,7 +406,7 @@ h3 {
 
 .subtitle {
   @extend %p-normal;
-  width: 562px;
+  max-width: 562px;
   color: $white;
   margin: 0 auto;
   margin-top: 50px;
@@ -442,7 +450,7 @@ h3 {
     padding: 5px 20px;
     border-radius: 10px;
     
-    @media(min-width:360px) {
+    @media(min-width:361px) {
       &:hover {
         background: $orange_200;
         color: $white;      
@@ -618,8 +626,10 @@ h3 {
 }
 
 .insert1 {
+  justify-content: center;
   grid-column: 1/2;
   grid-row: 1/2;
+ 
   @media (max-width: 1024px) {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -631,6 +641,7 @@ h3 {
 }
 
 .insert2 {
+  justify-content: center;
   grid-column: 2/3;
   grid-row: 1/2;
   @media (max-width: 1024px) {
@@ -643,6 +654,7 @@ h3 {
   }
 }
 .insert3 {
+  justify-content: center;
   grid-column: 3/4;
   grid-row: 1/2;
   @media (max-width: 1024px) {
@@ -656,6 +668,7 @@ h3 {
 }
 
 .insert4 {
+  justify-content: center;
   grid-column: 1/2;
   grid-row: 2/3;
   @media (max-width: 1024px) {
@@ -668,6 +681,7 @@ h3 {
   }
 }
 .insert5 {
+  justify-content: center;
   grid-column: 2/3;
   grid-row: 2/3;
   @media (max-width: 1024px) {
@@ -680,6 +694,7 @@ h3 {
   }
 }
 .insert6 {
+  justify-content: center;
   grid-column: 3/4;
   grid-row: 2/3;
   @media (max-width: 1024px) {
@@ -715,22 +730,30 @@ h3 {
   &:last-child {
     margin-right: 0;
   }
+ 
   a {
     padding-bottom: 3px;
     text-decoration: none;
     color: $black;
+   
     @media (max-width: 360px) {
       padding-bottom: 0px;
     }
-    &:hover {
-      border-bottom: 2px solid #1b1f2b;
+    @media(min-width: 361px) {
+      &:hover {
+        border-bottom: 2px solid #1b1f2b;
+      }
     }
+   
     &:active {
       color: $orange_200;
       border-bottom: 2px solid $orange_200;
     }
   }
+  
+  
 }
+
 .insert-header {
   width: 247px;
   margin: 0 auto;
@@ -738,6 +761,7 @@ h3 {
   z-index: 2;
   position: absolute;
   left: 50px;
+  top: 0;
   @media (max-width: 1024px) {
     width: 350px;
     height: 83px;
@@ -771,6 +795,7 @@ h3 {
     }
   }
 }
+
 .insert-price {
   @extend %p-small;
   margin-top: 16px;
@@ -818,9 +843,12 @@ h3 {
     display: inherit;
     padding: 7px 20px;
     border-radius: 50px;
-    &:hover {
-      background: $green_400;
+    @media(min-width:361px) {
+      &:hover {
+        background: $green_400;
+      }
     }
+    
     &:active {
       background: $orange_200;
     }
@@ -997,12 +1025,15 @@ h3 {
     color: $green_400;
     @extend %p-normal;
     border-radius: 10px;
-    &:hover {
-      background: $grey_100;
+    @media(min-width:400px)  {
+      &:hover {
+        background: $grey_100;
+      }
+      &:active {
+        background: $grey_200;
+      }
     }
-    &:active {
-      background: $grey_200;
-    }
+   
     @media (max-width: 360px) {
       font-family: Roboto;
       font-style: normal;
@@ -1032,12 +1063,15 @@ h3 {
       
     }
   }
-  #search:hover {
-    background: $green_300;
+  @media(min-width:400px) {
+    #search:hover {
+      background: $green_300;
+    }
+    #search:active {
+      background: $green_200;
+    }
   }
-  #search:active {
-    background: $green_200;
-  }
+ 
   .reset {
     color: $green_400;
     background: $green_100;
@@ -1356,10 +1390,12 @@ input[type="checkbox"] {
   }
   a {
     color: $black;
-
-    &:hover {
-      text-decoration: underline;
+    @media(min-width:361px) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
+    
     &:active {
       color: $green_400;
     }
@@ -1980,6 +2016,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+    align-items: center;
     @media (max-width: 1024px) {
       max-width: 918px;
       margin: 0 53px;
@@ -2236,7 +2273,7 @@ input[type="checkbox"] {
     margin-top: 20px;
     @extend %p-normal;
     color: $grey_300;
-    @media (max-width: 360px) {
+    @media (max-width: 400px) {
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
@@ -2246,9 +2283,12 @@ input[type="checkbox"] {
     a {
       color: $black;
     }
-    a:hover {
-      text-decoration: underline;
+    @media(min-width:361px) {
+      a:hover {
+        text-decoration: underline;
+      }
     }
+   
     a:active {
       color: $green_400;
     }
@@ -2281,10 +2321,8 @@ input[type="checkbox"] {
     @media (max-width: 700px) {
       flex-direction: column;
     }
-    @media (max-width: 360px) {
-      max-width: 318px;
-      
-      
+    @media (max-width: 400px) {
+      max-width: 318px;      
       flex-direction: column;
       font-family: Roboto;
       font-style: normal;
@@ -2321,6 +2359,7 @@ input[type="checkbox"] {
   }
   
 }
+
 .link {
   width: 126px;
   display: flex;
@@ -2328,9 +2367,12 @@ input[type="checkbox"] {
   a {
     color: black;
   }
-  a:hover {
-    border-bottom: 1px solid #1b1f2b;
+  @media(min-width: 361px) {
+    a:hover {
+      border-bottom: 1px solid #1b1f2b;
+    }
   }
+ 
   @media (max-width: 700px) {
     margin-right: 10px;
   }
@@ -2364,5 +2406,32 @@ input[type="checkbox"] {
         line-height: 142%;
       }
     }
+  }
+}
+.filter-list__item a.focus {
+  color: $orange_200;
+  border-bottom: 2px solid $orange_200;
+}
+.inst-photo {
+  width: 14px;
+  margin-left: 10px;
+  @media(max-width: 360px) {
+    width: 10px;
+    margin-left: 9px;
+  }
+}
+.fb-photo {
+  margin-left: 13px;
+  @media(max-width:360px) {
+    width: 6px;
+    margin-left:10px;
+  }
+}
+.vk-photo {
+  margin-left: 5px;
+  @media(max-width:360px) {
+    width: 15px;
+    margin-left: 3px;
+    margin-top: 3px;
   }
 }

@@ -60,7 +60,7 @@
 						<h2 class="chooseTour__title">Выбери свой тур</h2>
 					</div>
 					<ul class="chooseTour__filter-list">
-						<li class="filter-list__item"><a href="#">Популярные</a></li>
+						<li class="filter-list__item"><a href="#" class="focus">Популярные</a></li>
 						<li class="filter-list__item"><a href="#">Авторские</a></li>
 						<li class="filter-list__item"><a href="#">Походы</a></li>
 						<li class="filter-list__item"><a href="#">Сплавы</a></li>
@@ -201,20 +201,20 @@
 								</label>
 								<label>
 									<p>Телефон</p>
-									<input type="tel" pattern="[0-9]" name="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required>
+									<input type="tel"  pattern="^[0-9]+$" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" name="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required>
 								</label>
 							</div>
 							<div class="rowDog3">
 								<label class="data-lab">
 									<p>Дата от</p>
-									<input type="date" name="" required>
+									<input type="date" name="" style="text-transform: uppercase; color: #A6A6A6" required>
 								</label>
 							
 								
 								
 								<label>
 									<p>Дата до</p>
-									<input type="date" name="" required>
+									<input type="date" name="" style="text-transform: uppercase; color: #A6A6A6" required>
 								</label>
 							</div>
 							
@@ -432,17 +432,17 @@
 				<div class="footPage__wrapLinks">
 					<!-------------- link one ----------------->
 					<div class="link">
-						<div class="link__photo"><img src="img/icons/inst.png"></div>
+						<div class="link__photo"><img src="img/icons/inst.svg" class="inst-photo"></div>
 						<a href="#">instagram</a>
 					</div>
 					<!------------ link two -------------------->
 					<div class="link">
-						<div class="link__photo"><img src="img/icons/fb.png"></div>
+						<div class="link__photo"><img src="img/icons/fb.svg" class="fb-photo"></div>
 						<a href="#">facebook</a>
 					</div>
 					<!--------------- link three -------------->
 					<div class="link">
-						<div class="link__photo"><img src="img/icons/vk.png"></div>
+						<div class="link__photo"><img src="img/icons/vk.svg" class="vk-photo"></div>
 						<a href="#">vkontakte</a>
 					</div>
 				</div>
