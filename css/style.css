@@ -222,6 +222,21 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  background-color: rgba(243, 239, 232, 0.6);
+  -webkit-backdrop-filter: blur(54px);
+          backdrop-filter: blur(54px);
+}
+.hidden .menu__item a, .hidden a {
+  color: #1b1f2b;
+}
+.hidden .menu__item a:hover, .hidden a:hover {
+  border-bottom: 1px #1b1f2b solid;
+}
+
 .logo {
   margin-top: 10px;
 }

@@ -1,0 +1,1 @@
+"use strict";var hiddenNav=document.getElementById("hiddenNav"),defaultPosition=450,scrollPosition=function(){return window.scrollY};window.addEventListener("scroll",(function(){scrollPosition()>=defaultPosition?hiddenNav.style.display="flex":hiddenNav.style.display="none"}));

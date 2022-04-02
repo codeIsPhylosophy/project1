@@ -43,6 +43,8 @@ $beige_200: #f4f0e9;
 $beige_100: #f9f7f4;
 $trip_color: linear-gradient(360deg,rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0.06) 48.44%,rgba(0, 0, 0, 0.5) 100%);
 $history_color: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%,rgba(0, 0, 0, 0.2) 100%);
+$hidden:rgba(243, 239, 232, 0.6);
+
 
 %h1 {
   font-family: Roboto;
@@ -281,7 +283,22 @@ h3 {
       flex-direction: column;
     }
   }
+  
 }
+
+ .hidden {
+   display: none;
+  position: fixed;
+  z-index: 3;
+   background-color: $hidden;
+   backdrop-filter: blur(54px);
+   .menu__item a, a{
+   color: $black;  
+   &:hover {
+     border-bottom: 1px $black solid;
+   } 
+  }   
+ }
 
 .logo {
   margin-top: 10px;
